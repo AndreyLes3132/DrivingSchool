@@ -1,0 +1,38 @@
+unit UChangeT;
+
+interface
+
+uses
+   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Data.Win.ADODB, ExtCtrls, IniFiles, System.IOUtils, UUsers, System.Generics.Defaults, System.Generics.Collections;
+
+type
+  TFChangeTicket = class(TForm)
+    LabelClass: TLabel;
+    ComboBoxTicket: TComboBox;
+    BEnt: TBitBtn;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FChangeTicket: TFChangeTicket;
+
+implementation
+uses UDataModule;
+
+{$R *.dfm}
+
+procedure TFChangeTicket.FormCreate(Sender: TObject);
+var ticketList: TList<String>; i: integer;
+begin
+  ticketList:= DataModule1.GetTicketList();
+  for i := 0 to ticketList.Count-1 do
+    ComboBoxTicket.Items.Add(ticketList[i]);
+end;
+
+end.

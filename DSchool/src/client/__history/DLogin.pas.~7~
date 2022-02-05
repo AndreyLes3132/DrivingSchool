@@ -1,0 +1,79 @@
+unit DLogin;
+
+interface
+
+uses
+   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.DBCtrls, Data.DB,
+  Data.Win.ADODB, ExtCtrls, IniFiles, System.IOUtils, Vcl.Buttons;
+
+type
+  TFLog = class(TForm)
+    LSearch: TLabel;
+    LHelp: TLabel;
+    LUser: TListBox;
+    TSearch: TEdit;
+    BLog: TBitBtn;
+    BReg: TBitBtn;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    procedure ListBoxRefresh(); overload;
+    procedure ListBoxRefresh(expr: string); overload;
+  end;
+
+var
+  FLog: TFLog;
+
+implementation
+uses UDataModule;
+{$R *.dfm}
+
+procedure TFLog.FormCreate(Sender: TObject);
+begin
+  LUser.TabWidth:= 50;
+  self.ListBoxRefresh();
+end;
+
+procedure TFLog.ListBoxRefresh();
+begin
+  LUser.Clear;
+  with DataModule1.ADOQuery1 do
+    begin
+      close;
+      SQL.Clear;
+      SQL.Add('SELECT user.id, user.last_name, user.first_name, user.patronymic, group.g_name FROM user INNER JOIN group ON group.id = user.group_id ORDER BY user.id ASC');
+      Open;
+      first;
+      while not(eof) do
+      begin
+        LUser.Items.Add(Fields[0].AsString+^I+Fields[1].AsString+^I+Fields[2].AsString+^I+Fields[3].AsString+^I+Fields[4].AsString);
+        Next;
+      end;
+    end;
+end;
+
+procedure TFLog.ListBoxRefresh(expr: string);
+begin
+  LUser.Clear;
+  with DataModule1.ADOQuery1 do
+    begin
+      close;
+      SQL.Clear;
+      SQL.Add('SELECT user.id, last_name, first_name, patronymic, group.g_name FROM user INNER JOIN group ON group.id = user.group_id WHERE last_name LIKE :expr1 OR first_name LIKE :expr2 OR patronymic LIKE :expr3 ORDER BY user.id ASC');
+      Parameters.ParamByName('expr1').Value := '%'+expr+'%';
+      Parameters.ParamByName('expr2').Value := '%'+expr+'%';
+      Parameters.ParamByName('expr3').Value := '%'+expr+'%';
+      Open;
+      first;
+      while not(eof) do
+      begin
+        LUser.Items.Add(Fields[0].AsString+^I+Fields[1].AsString+^I+Fields[2].AsString+^I+Fields[3].AsString+^I+Fields[4].AsString);
+        Next;
+      end;
+    end;
+end;
+
+
+end.

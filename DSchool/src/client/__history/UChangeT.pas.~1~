@@ -1,0 +1,27 @@
+unit UChangeT;
+
+interface
+
+uses
+   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TFChangeTicket = class(TForm)
+    LabelClass: TLabel;
+    ComboBoxClass: TComboBox;
+    BEnt: TBitBtn;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FChangeTicket: TFChangeTicket;
+
+implementation
+
+{$R *.dfm}
+
+end.

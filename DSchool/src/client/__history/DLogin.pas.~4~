@@ -1,0 +1,49 @@
+unit DLogin;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.DBCtrls, Data.DB,
+  Data.Win.ADODB, ExtCtrls, IniFiles, System.IOUtils;
+
+type
+  TFLog = class(TForm)
+    LSearch: TLabel;
+    LHelp: TLabel;
+    LUser: TListBox;
+    TSearch: TEdit;
+    BLog: TBitBtn;
+    BReg: TBitBtn;
+  private
+    { Private declarations }
+  public
+    procedure ListBoxRefresh(); overload;
+  end;
+
+var
+  FLog: TFLog;
+
+implementation
+uses UDataModule;
+{$R *.dfm}
+
+procedure TFLog.ListBoxRefresh();
+begin
+  LUser.Clear;
+  with DataModule1.ADOQuery1 do
+    begin
+      close;
+      SQL.Clear;
+      SQL.Add('SELECT user.id, user.last_name, user.first_name, user.patronymic, group.g_name FROM user INNER JOIN group ON group.id = user.group_id ORDER BY user.id ASC');
+      Open;
+      first;
+      while not(eof) do
+      begin
+        LUser.Items.Add(Fields[0].AsString+^I+Fields[1].AsString+^I+Fields[2].AsString+^I+Fields[3].AsString+^I+Fields[4].AsString);
+        Next;
+      end;
+    end;
+end;
+
+end.

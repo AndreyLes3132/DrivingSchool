@@ -1,0 +1,46 @@
+unit UReg;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Data.Win.ADODB, ExtCtrls, IniFiles, System.IOUtils, UUsers, System.Generics.Defaults, System.Generics.Collections;
+
+type
+  TFReg = class(TForm)
+    LabelLastName: TLabel;
+    LabelFirstName: TLabel;
+    LabelMiddleName: TLabel;
+    LabelClass: TLabel;
+    LabelPassword: TLabel;
+    LabelTitle: TLabel;
+    EditLastName: TEdit;
+    EditFirstName: TEdit;
+    EditMiddleName: TEdit;
+    ComboBoxClass: TComboBox;
+    EditPassword: TEdit;
+    BReg: TBitBtn;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FReg: TFReg;
+
+implementation
+ uses UDataModule, ULogin, UAccauntManager;
+{$R *.dfm}
+
+procedure TFReg.FormCreate(Sender: TObject);
+var groupList: TList<String>; i: integer;
+begin
+  groupList:= DataModule1.GetGroupList();
+  for i := 0 to groupList.Count-1 do
+    ComboBoxClass.Items.Add(groupList[i]);
+end;
+
+end.

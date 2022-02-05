@@ -1,0 +1,46 @@
+unit UTest;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Buttons, ULesson;
+
+type
+  TFTest = class(TForm)
+    StatusBar1: TStatusBar;
+    BLog: TBitBtn;
+    BReg: TBitBtn;
+    BitBtn1: TBitBtn;
+    procedure Show(Sender: TObject);
+  private
+    { Private declarations }
+  public
+  idTopic:Integer;
+  topicName:String;
+    { Public declarations }
+  end;
+
+var
+  FTest: TFTest;
+
+implementation
+
+
+
+
+{$R *.dfm}
+
+procedure TFTest.Show(Sender: TObject);
+begin
+   FLesson := TFLesson.Create(nil);
+   FLesson.idTopic := idTopic;
+   FLesson.TopicName := topicName;
+   FLesson.Show;
+         // TestsLearningFrame.BtnGowait.Glyph.Assign(nil);
+          //TestsLearningFrame.ImageList1.GetBitmap(0,TestsLearningFrame.BtnGowait.Glyph);
+//          StatusBar1.Panels[0].Text:='Время прохождения: 00:00';
+//          StatusBar1.Panels[1].Text:='Слово: '+inttostr(IndexWord+1)+' из '+inttostr(ListWords.Count);
+end;
+
+end.

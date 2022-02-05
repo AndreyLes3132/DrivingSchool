@@ -1,0 +1,24 @@
+unit UUsers;
+
+interface
+uses  System.SysUtils, System.Variants, System.Classes,
+      System.IOUtils, System.Hash;
+type
+  TUsers=class
+  public
+    sid: integer;
+    s_last_name: string;
+    s_first_name: string;
+    s_patronymic: string;
+    s_cid: integer;
+    s_password: string;
+end;
+  TMethodist=class
+  public
+    mid: integer;
+    m_login: string;
+    m_password: string;
+end;
+
+implementation
+end.

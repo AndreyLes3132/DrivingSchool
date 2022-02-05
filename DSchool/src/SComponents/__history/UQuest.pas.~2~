@@ -1,0 +1,26 @@
+unit UQuest;
+
+interface
+uses Windows,ADODB, DB, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, pngimage, jpeg, ExtCtrls, UDataModule, System.Generics.Defaults, System.Generics.Collections,
+  ULessonAndTopic, Math, UUsers;
+ type
+
+ TQuestClass = class(TObject)
+
+    private
+    public
+    id_quest:Integer;
+    qustion:string;
+    help:string;
+    img:TMemoryStream;
+    answ_v:string;
+    true_answ:integer;
+    ques_category:string;
+    nb_id:integer;
+    end;
+
+
+implementation
+
+end.

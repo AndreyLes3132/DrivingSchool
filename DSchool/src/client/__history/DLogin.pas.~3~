@@ -1,0 +1,30 @@
+unit DLogin;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TFLog = class(TForm)
+    LSearch: TLabel;
+    LHelp: TLabel;
+    LUser: TListBox;
+    TSearch: TEdit;
+    BLog: TBitBtn;
+    BReg: TBitBtn;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FLog: TFLog;
+
+implementation
+
+{$R *.dfm}
+
+end.

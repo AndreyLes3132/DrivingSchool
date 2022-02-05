@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.155,D:\Del\DSchool\src\Unit1.pas=D:\Del\DSchool\src\UAccauntManager.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.491,=D:\Del\DSchool\src\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.852,=D:\Del\DSchool\src\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.608,=D:\Delphi\Del\DSchool\src\Domain\UTicket.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.468,D:\Delphi\Del\DSchool\src\SComponents\Unit2.pas=D:\Delphi\Del\DSchool\src\SComponents\UQuest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.943,=D:\Delphi\Del\DSchool\src\SComponents\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.786,D:\Del\DSchool\src\SComponents.dproj=D:\Del\DSchool\src\SComponents\SComponents.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.352,=D:\Delphi\Del\DSchool\src\SComponents\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.408,=D:\Del\DSchool\src\Domain\UUsers.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,=D:\Del\DSchool\src\DataModule\UDataModule.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.122,D:\Del\DSchool\src\Project1.dproj=D:\Del\DSchool\src\SComponents.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.664,D:\Del\DSchool\src\UAccauntManager.pas=D:\Del\DSchool\src\SComponents\UAccauntManager.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.801,D:\Delphi\Del\DSchool\src\SComponents\Unit1.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

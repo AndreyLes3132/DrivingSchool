@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.572,D:\Del\DSchool\src\Domain\Domain.dproj=D:\Del\DSchool\src\Domain.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.070,D:\Del\DSchool\src\Domain.dproj=D:\Del\DSchool\src\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.531,=D:\Del\DSchool\src\Domain\ModelSupport_Domain\default.txaPackage</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.609,=D:\Delphi\Del\DSchool\src\Domain\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.886,D:\Del\DSchool\src\Domain\UUsers.pas=D:\Del\DSchool\src\Domain\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.944,=D:\Delphi\Del\DSchool\src\Domain\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.805,D:\Delphi\Del\DSchool\src\Domain\Unit1.pas=D:\Delphi\Del\DSchool\src\Domain\UTicket.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.858,=D:\Del\DSchool\src\Domain\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="ModelSupport_Domain"/>
+    <File Path="ModelSupport_Domain\default.txaPackage"/>
+    <File Path="UTicket.pas"/>
+    <File Path="UUsers.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

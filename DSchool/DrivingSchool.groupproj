@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{EE1BA819-8216-4856-9B96-FBB57A45A015}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="src\client\DSchool.dproj">
+            <Dependencies>src\DataModule\DataModule.dproj;src\Domain\Domain.dproj;src\SComponents\SComponents.dproj</Dependencies>
+        </Projects>
+        <Projects Include="src\DataModule\DataModule.dproj">
+            <Dependencies>src\Domain\Domain.dproj</Dependencies>
+        </Projects>
+        <Projects Include="src\SComponents\SComponents.dproj">
+            <Dependencies>src\Domain\Domain.dproj;src\DataModule\DataModule.dproj</Dependencies>
+        </Projects>
+        <Projects Include="src\Domain\Domain.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DSchool" DependsOnTargets="DataModule;Domain;SComponents">
+        <MSBuild Projects="src\client\DSchool.dproj"/>
+    </Target>
+    <Target Name="DSchool:Clean" DependsOnTargets="DataModule:Clean;Domain:Clean;SComponents:Clean">
+        <MSBuild Projects="src\client\DSchool.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DSchool:Make" DependsOnTargets="DataModule:Make;Domain:Make;SComponents:Make">
+        <MSBuild Projects="src\client\DSchool.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DataModule" DependsOnTargets="Domain">
+        <MSBuild Projects="src\DataModule\DataModule.dproj"/>
+    </Target>
+    <Target Name="DataModule:Clean" DependsOnTargets="Domain:Clean">
+        <MSBuild Projects="src\DataModule\DataModule.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DataModule:Make" DependsOnTargets="Domain:Make">
+        <MSBuild Projects="src\DataModule\DataModule.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SComponents" DependsOnTargets="Domain;DataModule">
+        <MSBuild Projects="src\SComponents\SComponents.dproj"/>
+    </Target>
+    <Target Name="SComponents:Clean" DependsOnTargets="Domain:Clean;DataModule:Clean">
+        <MSBuild Projects="src\SComponents\SComponents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SComponents:Make" DependsOnTargets="Domain:Make;DataModule:Make">
+        <MSBuild Projects="src\SComponents\SComponents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Domain">
+        <MSBuild Projects="src\Domain\Domain.dproj"/>
+    </Target>
+    <Target Name="Domain:Clean">
+        <MSBuild Projects="src\Domain\Domain.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Domain:Make">
+        <MSBuild Projects="src\Domain\Domain.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DSchool;DataModule;SComponents;Domain"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DSchool:Clean;DataModule:Clean;SComponents:Clean;Domain:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DSchool:Make;DataModule:Make;SComponents:Make;Domain:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

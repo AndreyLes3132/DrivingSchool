@@ -1,0 +1,30 @@
+unit UTest;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TFTest = class(TForm)
+    StatusBar1: TStatusBar;
+    BLog: TBitBtn;
+    BReg: TBitBtn;
+    BitBtn1: TBitBtn;
+  private
+    { Private declarations }
+  public
+  idTopic:Integer;
+  topicName:String;
+    { Public declarations }
+  end;
+
+var
+  FTest: TFTest;
+
+implementation
+
+{$R *.dfm}
+
+end.

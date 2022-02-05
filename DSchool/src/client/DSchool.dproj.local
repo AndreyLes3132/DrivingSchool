@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.238,D:\Del\DSchool\src\client\Unit2.dfm=D:\Del\DSchool\src\client\UTest.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.360,D:\dProject\Unit1.pas=D:\Del\DSchool\src\client\Driving.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.285,=D:\dProject\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.303,D:\dProject\Project1.dproj=D:\Del\DSchool\src\client\DSchool.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.756,=D:\Del\DSchool\src\client\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.381,D:\Del\DSchool\src\client\Unit3.pas=D:\Del\DSchool\src\client\UResult.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.360,D:\dProject\Unit1.dfm=D:\Del\DSchool\src\client\Driving.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.741,=D:\Del\DSchool\src\Domain\UUsers.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.693,D:\Del\DSchool\src\client\Unit4.dfm=D:\Del\DSchool\src\client\UReg.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.887,D:\Delphi\Del\DSchool\src\client\Unit1.dfm=D:\Delphi\Del\DSchool\src\client\ULesson.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.251,D:\Del\DSchool\src\client\DLogin.pas=D:\Del\DSchool\src\client\ULogin.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.281,=D:\Del\DSchool\src\client\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.238,D:\Del\DSchool\src\client\Unit2.pas=D:\Del\DSchool\src\client\UTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.437,D:\Del\DSchool\src\client\Driving.dfm=D:\Del\DSchool\src\client\DLogin.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.805,=D:\Del\DSchool\src\client\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.693,D:\Del\DSchool\src\client\Unit4.pas=D:\Del\DSchool\src\client\UReg.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.373,D:\Delphi\Del\DSchool\src\client\Unit1.dfm=D:\Delphi\Del\DSchool\src\client\UChangeT.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.449,=D:\Del\DSchool\src\client\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.962,D:\Del\DSchool\src\client\Unit1.pas=D:\Del\DSchool\src\client\UAuthorise.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.636,D:\Del\DSchool\src\client\Unit1.pas=D:\Del\DSchool\src\client\UMain_User_form.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.238,=D:\Del\DSchool\src\SComponents\UAccauntManager.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.460,=D:\Del\DSchool\src\DataModule\UDataModule.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.962,D:\Del\DSchool\src\client\Unit1.dfm=D:\Del\DSchool\src\client\UAuthorise.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.636,D:\Del\DSchool\src\client\Unit1.dfm=D:\Del\DSchool\src\client\UMain_User_form.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.214,=D:\Del\DSchool\src\client\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.251,D:\Del\DSchool\src\client\DLogin.dfm=D:\Del\DSchool\src\client\ULogin.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.437,D:\Del\DSchool\src\client\Driving.pas=D:\Del\DSchool\src\client\DLogin.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.039,=D:\Delphi\Del\DSchool\src\SComponents\UQuest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.598,=D:\Delphi\Del\DSchool\src\Domain\UTicket.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.381,D:\Del\DSchool\src\client\Unit3.dfm=D:\Del\DSchool\src\client\UResult.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.851,=D:\Delphi\Del\DSchool\src\client\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.373,D:\Delphi\Del\DSchool\src\client\Unit1.pas=D:\Delphi\Del\DSchool\src\client\UChangeT.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.469,=D:\Delphi\Del\DSchool\src\client\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.887,D:\Delphi\Del\DSchool\src\client\Unit1.pas=D:\Delphi\Del\DSchool\src\client\ULesson.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="..\..\src"/>
+    <File Path="..\DataModule"/>
+    <File Path="..\DataModule\UDataModule.pas"/>
+    <File Path="..\DataModule\UDataModule.dfm"/>
+    <File Path="..\Domain"/>
+    <File Path="..\Domain\UUsers.pas"/>
+    <File Path="..\Domain\UTicket.pas"/>
+    <File Path="..\SComponents"/>
+    <File Path="..\SComponents\UAccauntManager.pas"/>
+    <File Path="..\SComponents\UQuest.pas"/>
+    <File Path="UAuthorise.pas"/>
+    <File Path="UAuthorise.dfm"/>
+    <File Path="ULogin.pas"/>
+    <File Path="ULogin.dfm"/>
+    <File Path="UMain_User_form.pas"/>
+    <File Path="UMain_User_form.dfm"/>
+    <File Path="UReg.pas"/>
+    <File Path="UReg.dfm"/>
+    <File Path="UResult.pas"/>
+    <File Path="UResult.dfm"/>
+    <File Path="UTest.pas"/>
+    <File Path="UTest.dfm"/>
+    <File Path="UChangeT.pas"/>
+    <File Path="UChangeT.dfm"/>
+    <File Path="ULesson.pas"/>
+    <File Path="ULesson.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

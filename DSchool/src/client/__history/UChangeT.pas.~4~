@@ -1,0 +1,71 @@
+unit UChangeT;
+
+interface
+
+uses
+   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Data.Win.ADODB, ExtCtrls, IniFiles, System.IOUtils, UUsers, System.Generics.Defaults, System.Generics.Collections;
+
+type
+  TFChangeTicket = class(TForm)
+    LabelClass: TLabel;
+    ComboBoxTicket: TComboBox;
+    BEnt: TBitBtn;
+    procedure FormCreate(Sender: TObject);
+    procedure BEntClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FChangeTicket: TFChangeTicket;
+
+implementation
+uses UDataModule;
+
+{$R *.dfm}
+
+procedure TFChangeTicket.BEntClick(Sender: TObject);
+var users: TUsers;
+begin
+if ComboBoxTicket.Text='' then Showmessage('Не выбран билет!')
+else
+  begin
+    users:= TUsers.Create();
+    users.s_last_name:= EditLastName.Text;
+    users.s_first_name:= EditFirstName.Text;
+    users.s_patronymic:= EditMiddleName.Text;
+    with DataModule1.ADOQuery1 do
+    begin
+      Close;
+      SQL.Clear;
+      SQL.Add('SELECT id FROM groups_users WHERE g_name = :cname');
+      Parameters.ParamByName('cname').Value:=ComboBoxClass.Text;
+      Open;
+      First;
+      if Fields[0].IsNull then
+        begin
+          users.s_gid:= InsertNewGroup(ComboBoxClass.Text);
+        end
+      else
+        users.s_gid:= Fields[0].AsInteger;
+    end;
+    users.s_password:= EditPassword.Text;
+    TAccManager.Registration(users);
+    self.Close;
+    FLog.ListBoxRefresh();
+   end;
+end;
+
+procedure TFChangeTicket.FormCreate(Sender: TObject);
+var ticketList: TList<String>; i: integer;
+begin
+  ticketList:= DataModule1.GetTicketList();
+  for i := 0 to ticketList.Count-1 do
+    ComboBoxTicket.Items.Add(ticketList[i]);
+end;
+
+end.
